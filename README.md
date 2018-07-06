@@ -19,6 +19,12 @@ around the garden.
 |1|[WB2022](jaycar.com.au/p/WB2022)| 1 meter of cat cable for hookup (or you can use your own)
 | | | some small screws for mounting|
 
+## Software Libraries
+|Library|Author|
+|---|---|
+|GFX | who else but Adafruit |
+|SSD1306 |Adafruit|
+
 ## Connection table
 | Nano | OLED | Soil sensor | Battery charger|
 |---|---|---|---|
@@ -32,18 +38,19 @@ The SPDT switch is connected as follows:
 
 |(charger) BATT+|(Nano) 5V| (charger) IN+|
 |---:|---|---
-|SPDT pins|
+
 
 this is so the unit will either power 5v -> charger IN+ when it is turned off
 and plugged in.
 or run off battery when turned on.
 
-# __Do not run off USB while also running off Battery__
+# __Note: Do not run off USB while also running off Battery__
 this is a direct connection from 5VUSB to battery, which will charge it, but won't stop
 charging it when it needs to stop.
 
 we tried using a diode but couldn't find one that had a sufficiently low dropout.
 the battery is only 3.7 and we need every inch of that going to power the device.
+
 
 ## Assembly
 This project was very much going through revisions right up until the 11th hour.
@@ -68,7 +75,7 @@ and drill, screw down and make sure it's strong.
 
 ##### OLED screen
 Unsolder the header on the OLED screen, be very careful with this, as if you
-leave the hot iron on it too long, the copper will remove and the device will 
+leave the hot iron on it too long, the copper will remove and the device will
 become inoperable without forensic repair. A handy tip is to clip as much of the
 headers off as you can using a big pair of cutters, and pull the black plastic
 off which is holding them together.
@@ -88,3 +95,40 @@ in place.
 ![OLED in place](images/beaut.jpg)
 
 ##### Battery charger
+
+The battery charger is just glued into place just above the moisture meter. Use the negative wire coming up from the moisture meter to connect to the negative terminal of the battery charger (BAT-)
+
+The positive lead will go to the battery charger and one of the switch's side terminals. A small diagram can demonstrate the isolation of the USB, charger, and battery power:
+
+![](images/IMAG0391.jpg)
+_this switch changes between connecting battery power to 5V, and the charger input to 5V, allowing to both run or charge the battery. care is needed not to feed USB power directly into the battery however: using a blocking diode would have been ideal, but there was too much of a voltage drop on an already under-volt'd system_
+
+Glue the toggle switch in place just above the battery holder and solder the battery lead in place; you might have to trim it to size so there is not too much wire.
+
+##### Connecting the two pieces together
+
+Now that you have a NANO with a screen, and the unit with battery charger, you can solder a short wire to go from S on the moisture sensor over to pin A6 on the NANO.
+
+_This picture is a picture of our first model, which did not include a switch and we made the sensor go to A7, but either A6/A7 is fine._
+
+![](images/IMAG0333.jpg)
+
+##### _measure twice, cut once_
+
+this project took a lot of do-over and revisions, you can see how dirty our project has become from soldering and unsoldering all the wires. once the switch is in place and the nano is glued onto the board, make the final connections between the switch, charger, and nano power connections. (also ensure the sensor is getting positive power aswel)
+
+You can see how dirty our final model is here:
+
+![](images/IMAG0335.jpg)
+
+Be sure to get some [Isoprop alcohol](jaycar.com.au/p/NA1066) to clean the board properly before you present it as a present to someone.
+
+## Programming
+
+Programming is as simple as downloading the source code [here](https://github.com/duinotech/portable-soil-moisture-meter/archive/master.zip) and running in arduino.
+
+## Use
+Really is as simple as turning it on and sticking it in the ground. we haven't tested the durability of it as we don't have any garden beds around, but it should be able to withstand some soft-soil and etc.
+
+## Notes
+there is a battery meter on it, but the unit can possibly die before the battery meter runs out, and it was added more as an after thought to demonstrate the concept.
