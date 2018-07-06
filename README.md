@@ -56,7 +56,7 @@ the battery is only 3.7 and we need every inch of that going to power the device
 This project was very much going through revisions right up until the 11th hour.
 (I had thought to include a battery meter while I was walking it to the ad dept.)
 ##### Soil meter
-this part needs to be the most integral, and can be screwed onto the base of the battery holder (negative side.)
+This part needs to be the most integral, and can be screwed onto the base of the battery holder (negative side.)
 unsolder the header connection on there and pull out the battery tab from the holder.
 you can unsolder the wire that's there and use a lead of an unused resistor (or otherwise)
 to make a solid solder connection going up from the battery base when you put it back in.
@@ -80,7 +80,7 @@ become inoperable without forensic repair. A handy tip is to clip as much of the
 headers off as you can using a big pair of cutters, and pull the black plastic
 off which is holding them together.
 
-solder some solid core wire to VCC, SDA, and SCL pins, only about 2-3 inches are needed.
+Solder some solid core wire to VCC, SDA, and SCL pins, only about 2-3 inches are needed.
 
 Bend the front two legs of the Nano (see picture) to make a sturdy holder for the
 OLED, place the OLED on the nano legs so that the top screw holes mount over the bent
@@ -90,7 +90,7 @@ legs and the wires run along the underside of the Nano. (a [3rd hand](jaycar.com
 Solder the screwholes to the legs. use a short lead to go from GND up and over to
 the USB connection shell.
 
-trim and strip the wires so that they are just long enough to reach A4, A5, and ground solder
+Trim and strip the wires so that they are just long enough to reach A4, A5, and ground solder
 in place.
 ![OLED in place](images/beaut.jpg)
 
@@ -115,7 +115,7 @@ _This picture is a picture of our first model, which did not include a switch an
 
 ##### _measure twice, cut once_
 
-this project took a lot of do-over and revisions, you can see how dirty our project has become from soldering and unsoldering all the wires. once the switch is in place and the nano is glued onto the board, make the final connections between the switch, charger, and nano power connections. (also ensure the sensor is getting positive power aswel)
+This project took a lot of do-over and revisions, you can see how dirty our project has become from soldering and unsoldering all the wires. once the switch is in place and the nano is glued onto the board, make the final connections between the switch, charger, and nano power connections. (also ensure the sensor is getting positive power aswel)
 
 You can see how dirty our final model is here:
 
@@ -131,4 +131,4 @@ Programming is as simple as downloading the source code [here](https://github.co
 Really is as simple as turning it on and sticking it in the ground. we haven't tested the durability of it as we don't have any garden beds around, but it should be able to withstand some soft-soil and etc.
 
 ## Notes
-there is a battery meter on it, but the unit can possibly die before the battery meter runs out, and it was added more as an after thought to demonstrate the concept.
+There is a battery meter on it, but the unit can possibly die before the battery meter runs out, and it was added more as an after thought to demonstrate the concept.
