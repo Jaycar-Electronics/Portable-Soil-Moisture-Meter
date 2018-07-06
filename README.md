@@ -2,7 +2,7 @@
 _test and measure_
 ### Author: D.West :+1:
 
-This is a great little tool for the green thumbs. using a nano, OLED screen and
+This is a great little tool for the green thumbs. Using a nano, OLED screen and
 rechargable battery pack, you can make this portable soil moisture meter to take
 around the garden.
 
@@ -40,8 +40,7 @@ The SPDT switch is connected as follows:
 |---:|---|---
 
 
-this is so the unit will either power 5v -> charger IN+ when it is turned off
-and plugged in.
+This is so the unit will either power 5v -> charger IN+ when it is turned off and plugged in.
 or run off battery when turned on.
 
 # __Note: Do not run off USB while also running off Battery__
@@ -85,6 +84,7 @@ Solder some solid core wire to VCC, SDA, and SCL pins, only about 2-3 inches are
 Bend the front two legs of the Nano (see picture) to make a sturdy holder for the
 OLED, place the OLED on the nano legs so that the top screw holes mount over the bent
 legs and the wires run along the underside of the Nano. (a [3rd hand](jaycar.com.au/p/TH1989) is helpful for this.)
+
 ![usb connection](images/IMAG0332.jpg)
 
 Solder the screwholes to the legs. use a short lead to go from GND up and over to
@@ -92,6 +92,7 @@ the USB connection shell.
 
 Trim and strip the wires so that they are just long enough to reach A4, A5, and ground solder
 in place.
+
 ![OLED in place](images/beaut.jpg)
 
 ##### Battery charger
@@ -100,7 +101,8 @@ The battery charger is just glued into place just above the moisture meter. Use 
 
 The positive lead will go to the battery charger and one of the switch's side terminals. A small diagram can demonstrate the isolation of the USB, charger, and battery power:
 
-![](images/IMAG0391.jpg)
+![battery charger](images/IMAG0391.jpg)
+
 _this switch changes between connecting battery power to 5V, and the charger input to 5V, allowing to both run or charge the battery. care is needed not to feed USB power directly into the battery however: using a blocking diode would have been ideal, but there was too much of a voltage drop on an already under-volt'd system_
 
 Glue the toggle switch in place just above the battery holder and solder the battery lead in place; you might have to trim it to size so there is not too much wire.
@@ -111,7 +113,7 @@ Now that you have a NANO with a screen, and the unit with battery charger, you c
 
 _This picture is a picture of our first model, which did not include a switch and we made the sensor go to A7, but either A6/A7 is fine._
 
-![](images/IMAG0333.jpg)
+![joining the units](images/IMAG0333.jpg)
 
 ##### _measure twice, cut once_
 
@@ -119,7 +121,7 @@ This project took a lot of do-over and revisions, you can see how dirty our proj
 
 You can see how dirty our final model is here:
 
-![](images/IMAG0335.jpg)
+![dirty](images/IMAG0335.jpg)
 
 Be sure to get some [Isoprop alcohol](jaycar.com.au/p/NA1066) to clean the board properly before you present it as a present to someone.
 
