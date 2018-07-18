@@ -37,7 +37,7 @@ around the garden.
 The SPDT switch is connected as follows:
 
 |(charger) BATT+|(Nano) 5V| (charger) IN+|
-|---:|---|---
+|---:|---|---|
 
 
 This is so the unit will either power 5v -> charger IN+ when it is turned off and plugged in.
