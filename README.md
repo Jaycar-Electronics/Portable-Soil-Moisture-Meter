@@ -22,7 +22,7 @@ around the garden.
 ## Software Libraries
 |Library|Author|
 |---|---|
-|GFX | who else but Adafruit |
+|GFX |Adafruit |
 |SSD1306 |Adafruit|
 
 ## Connection table
